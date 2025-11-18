@@ -1,0 +1,14 @@
+# Instalar dependencias
+pip install -r requirements.txt
+
+# Crear migraciones
+python manage.py makemigrations propiedades agentes clientes
+
+# Aplicar migraciones
+python manage.py migrate
+
+# Crear superusuario
+python manage.py createsuperuser
+
+# Ejecutar servidor
+python manage.py runserver
