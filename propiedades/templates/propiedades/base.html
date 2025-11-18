@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Inmobiliaria Medina{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'propiedades/estilos/style.css' %}">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo"> Inmobiliaria Medina</div>
+            <ul class="nav-links">
+                <li><a href="{% url 'inicio' %}">Inicio</a></li>
+                <li><a href="#">Propiedades</a></li>
+                <li><a href="#">Agentes</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>📞 +57 312 000000</p>
+                <p>✉️ info@inmobiliaria.com</p>
+                <p>📍 Av. Principal 123, Ciudad</p>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <p><a href="#">Propiedades</a></p>
+                <p><a href="#">Agentes</a></p>
+                <p><a href="#">Nosotros</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Horario</h3>
+                <p>Lunes a Viernes: 9am - 6pm</p>
+                <p>Sábados: 10am - 2pm</p>
+                <p>Domingos: Cerrado</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
